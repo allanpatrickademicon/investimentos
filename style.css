@@ -153,24 +153,64 @@ body {
 }
 
 /* DEPOIMENTOS */
-.depoimentos {
-    padding: 80px;
-    background: black;
-    color: white;
+.depoimentos{
+padding:120px 20px;
+background: radial-gradient(circle at top, #111 0%, #050505 100%);
+text-align:center;
 }
 
-.card {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    background: #111;
-    padding: 15px;
-    border-radius: 10px;
+.depoimentos h2{
+font-size:48px;
+font-weight:800;
+margin-bottom:60px;
+letter-spacing:1px;
 }
 
-.card img {
-    width: 60px;
-    border-radius: 50%;
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:25px;
+margin:20px auto;
+max-width:600px;
+display:flex;
+gap:15px;
+text-align:left;
+backdrop-filter: blur(6px);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border:1px solid rgba(255,255,255,0.15);
+}
+
+.card img{
+width:55px;
+height:55px;
+border-radius:50%;
+}
+
+.card h4{
+font-size:16px;
+font-weight:600;
+margin-bottom:5px;
+}
+
+.card span{
+font-size:13px;
+color:#aaa;
+}
+
+.card .stars{
+color:#f5a623;
+margin:8px 0;
+}
+
+.card p{
+color:#ccc;
+font-size:14px;
+line-height:1.5;
 }
 
 /* BANNER */
@@ -425,4 +465,11 @@ font-size:28px;
 text-decoration:none;
 box-shadow:0 4px 15px rgba(0,0,0,0.3);
 z-index:999;
+}
+
+.stars{
+    color:#f5a623;
+    margin:8px 0;
+    font-size:14px;
+    letter-spacing:2px;
 }
