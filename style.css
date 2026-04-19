@@ -1,21 +1,58 @@
-body{
+/* RESET */
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#050505;
+color:#fff;
+}
+
+/* CONTAINER GLOBAL */
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+}
+
+/* FUNDO PADRÃO ESTILO LOVABLE */
+section{
+position:relative;
+}
+
+section::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size:3px 3px;
+opacity:0.2;
+pointer-events:none;
 }
 
 /* HERO */
 .hero{
 display:flex;
-padding:60px 80px;
-background:#f5f5f5;
 align-items:center;
+padding:80px 0;
+background:#f5f5f5;
+color:#000;
 position:relative;
+}
+
+.hero .container{
+display:flex;
+align-items:center;
 }
 
 .logo{
 position:absolute;
 top:20px;
-left:80px;
+left:20px;
 width:120px;
 opacity:0.15;
 }
@@ -28,19 +65,19 @@ width:50%;
 color:#ff2a2a;
 font-size:46px;
 line-height:1.2;
-max-width:600px;
+margin-bottom:20px;
 }
 
 .btn-whatsapp{
 display:inline-flex;
 align-items:center;
 gap:10px;
-margin-top:30px;
 background:#ff2a2a;
 color:#fff;
 padding:14px 28px;
 border-radius:30px;
 text-decoration:none;
+margin-top:20px;
 }
 
 .btn-whatsapp img{
@@ -75,10 +112,19 @@ background:linear-gradient(to right,#f5f5f5,transparent);
 /* BARRA */
 .barra-beneficios{
 background:red;
-color:#fff;
+padding:12px 0;
+}
+
+.barra-beneficios .container{
 display:flex;
-justify-content:space-around;
-padding:12px;
+justify-content:space-between;
+color:#fff;
+}
+
+.item{
+display:flex;
+align-items:center;
+gap:8px;
 }
 
 .bolinha{
@@ -90,44 +136,63 @@ border-radius:50%;
 
 /* FORM */
 .form-section{
-background:#000;
-padding:80px;
-display:flex;
-justify-content:center;
+padding:80px 0;
+background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
 }
 
 .form-box{
 background:#111;
 padding:30px;
 border-radius:10px;
-width:300px;
-color:#fff;
+width:350px;
+margin:0 auto;
+text-align:center;
 }
 
 .form-box input{
 width:100%;
 margin:10px 0;
-padding:10px;
+padding:12px;
+border:none;
 }
 
 .btn-form{
 background:red;
-padding:10px;
-text-align:center;
+color:#fff;
+padding:12px;
 display:block;
+margin-top:10px;
 }
 
 /* TABELA */
 .tabela{
-background:#000;
-color:#fff;
-padding:80px;
+padding:80px 0;
 text-align:center;
+background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
 }
 
-.tabela th{
+.tabela h2{
+margin-bottom:10px;
+}
+
+.tabela p{
+margin-bottom:30px;
+color:#aaa;
+}
+
+table{
+margin:0 auto;
+border-collapse:collapse;
+}
+
+th{
 background:red;
-padding:10px;
+padding:12px 20px;
+}
+
+td{
+padding:10px 20px;
+text-align:center;
 }
 
 .lucro{
@@ -136,9 +201,16 @@ color:lime;
 
 /* PASSOS */
 .passos{
+padding:100px 0;
 background:#0b0b0b;
-padding:100px 80px;
-color:#fff;
+}
+
+.passos .container{
+max-width:900px;
+}
+
+.passos h2{
+margin-bottom:40px;
 }
 
 .passo{
@@ -150,28 +222,27 @@ padding-bottom:20px;
 
 .passo span{
 color:red;
-font-size:30px;
+font-size:28px;
 margin-right:20px;
 }
 
 /* DEPOIMENTOS */
 .depoimentos{
-padding:120px 80px;
-background:#050505;
-color:#fff;
+padding:120px 0;
+background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
 }
 
 .subtitulo{
 color:#ff2a2a;
 font-size:12px;
 letter-spacing:3px;
-margin-bottom:5px;
+margin-bottom:10px;
 text-transform:uppercase;
 }
 
 .depoimentos h2{
 font-size:56px;
-margin-bottom:20px;
+margin-bottom:40px;
 }
 
 .card{
@@ -182,7 +253,7 @@ padding:25px;
 margin-bottom:25px;
 display:flex;
 gap:15px;
-max-width:600px;
+max-width:700px;
 }
 
 .card img{
@@ -198,11 +269,13 @@ color:#fff;
 .card span{
 color:#aaa;
 font-size:13px;
+display:block;
+margin-bottom:5px;
 }
 
 .stars{
 color:#f5a623;
-margin:5px 0;
+margin-bottom:10px;
 }
 
 .card p{
@@ -212,4 +285,23 @@ color:#bbb;
 /* BANNER */
 .banner img{
 width:100%;
+}
+
+/* BOTÃO WHATS FLUTUANTE */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.whatsapp-float img{
+width:30px;
 }
