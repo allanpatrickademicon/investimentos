@@ -174,10 +174,21 @@ body {
 .depoimentos h2{
     font-size:56px;
     font-weight:800;
-    margin-bottom:40px;
+    margin-bottom:10px;
     letter-spacing:1px;
     color:#ffffff;
     margin-left:10%;
+    text-align:left;
+}
+
+.depoimentos small{
+    display:block;
+    color:#ff2a2a;
+    font-size:12px;
+    letter-spacing:3px;
+    margin-left:10%;
+    margin-bottom:10px;
+    text-transform:uppercase;
 }
 
 .card{
@@ -426,14 +437,10 @@ max-width:500px;
     font-size:56px;
     font-weight:800;
     color:#ffffff;
-    margin-bottom:40px;
-    text-align:center;
-}
-
-.depoimentos h2{
-font-size:42px;
-text-align:center;
-margin-bottom:60px;
+    margin-bottom:10px;
+    letter-spacing:1px;
+    text-align:left;
+    margin-left:10%;
 }
 
 .card{
@@ -493,12 +500,11 @@ z-index:999;
 }
 
 .subtitulo{
+    display:block;
     color:#ff2a2a;
     font-size:12px;
-    letter-spacing:2px;
-    margin-bottom:8px;
-
-    max-width:650px;
-    margin-left:auto;
-    margin-right:auto;
+    letter-spacing:3px;
+    margin-left:10%;
+    margin-bottom:10px;
+    text-transform:uppercase;
 }
