@@ -1,326 +1,220 @@
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investimento no Brasil</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-body{
-font-family:Arial, sans-serif;
-background:#050505;
-color:#fff;
-}
+<body>
 
-/* CONTAINER */
-.container{
-max-width:1200px;
-margin:0 auto;
-padding:0 20px;
-}
+<!-- HERO -->
+<section class="hero">
+  <img src="img/logo.png" class="logo">
 
-/* FUNDO PADRÃO */
-section{
-position:relative;
-}
+  <div class="container">
 
-section::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
-background-size:3px 3px;
-opacity:0.2;
-pointer-events:none;
-}
+    <div class="hero-left">
+      <h1>
+        Para você que ganha em Euro, investir no Brasil pode multiplicar seu patrimônio de forma estratégica.
+      </h1>
 
-/* HERO */
-.hero{
-display:flex;
-align-items:center;
-padding:80px 0;
-background:#f5f5f5;
-color:#000;
-position:relative;
-}
+      <a href="#" class="btn-whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        Falar com o especialista
+      </a>
 
-.hero .container{
-display:flex;
-align-items:center;
-}
+      <p class="apresentacao">
+        <strong>Prazer, sou Alan Patrick</strong>, especialista em estratégias de investimento há mais de 5 anos.<br>
+        Ajudo brasileiros que vivem no exterior a investir no Brasil de forma segura e estratégica.
+      </p>
+    </div>
 
-.logo{
-position:absolute;
-top:20px;
-left:20px;
-width:120px;
-opacity:0.15;
-}
+    <div class="hero-right">
+      <img src="img/alan.png">
+    </div>
 
-.hero-left{
-width:50%;
-}
+  </div>
+</section>
 
-.hero h1{
-color:#ff2a2a;
-font-size:46px;
-line-height:1.2;
-margin-bottom:20px;
-}
+<!-- BARRA -->
+<section class="barra-beneficios">
+  <div class="container">
 
-.btn-whatsapp{
-display:inline-flex;
-align-items:center;
-gap:10px;
-background:#ff2a2a;
-color:#fff;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-margin-top:20px;
-}
+    <div class="item">
+      <span class="bolinha"></span>
+      Rentabilidade acima do mercado
+    </div>
 
-.btn-whatsapp img{
-width:20px;
-}
+    <div class="item">
+      <span class="bolinha"></span>
+      Operações seguras
+    </div>
 
-.apresentacao{
-margin-top:20px;
-color:#555;
-max-width:500px;
-}
+    <div class="item">
+      <span class="bolinha"></span>
+      Atendimento para brasileiros no exterior
+    </div>
 
-.hero-right{
-width:50%;
-position:relative;
-}
+  </div>
+</section>
 
-.hero-right img{
-width:100%;
-}
+<!-- FORM -->
+<section class="form-section">
+  <div class="container">
 
-.hero-right::before{
-content:"";
-position:absolute;
-left:0;
-top:0;
-width:200px;
-height:100%;
-background:linear-gradient(to right,#f5f5f5,transparent);
-}
+    <div class="form-box">
+      <h3>Simule sua parcela agora</h3>
 
-/* BARRA */
-.barra-beneficios{
-background:red;
-padding:12px 0;
-}
+      <input type="text" placeholder="Seu nome">
+      <input type="text" placeholder="WhatsApp com código do país">
+      <input type="text" placeholder="Onde você mora?">
+      <input type="text" placeholder="Crédito de interesse">
 
-.barra-beneficios .container{
-display:flex;
-justify-content:space-between;
-color:#fff;
-}
+      <a href="#" class="btn-form">Descubra agora</a>
+    </div>
 
-.item{
-display:flex;
-align-items:center;
-gap:8px;
-}
+  </div>
+</section>
 
-.bolinha{
-width:8px;
-height:8px;
-background:lime;
-border-radius:50%;
-}
+<!-- TABELA -->
+<section class="tabela">
+  <div class="container">
 
-/* FORM */
-.form-section{
-padding:80px 0;
-background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
-}
+    <h2>ESCOLHA SEU PLANO</h2>
+    <p>Parcelas calculadas com câmbio atual. Valores sujeitos à atualização.</p>
 
-.form-box{
-background:#111;
-padding:30px;
-border-radius:10px;
-width:350px;
-margin:0 auto;
-text-align:center;
-}
+    <table>
+      <tr>
+        <th>CRÉDITO</th>
+        <th>PARCELA €</th>
+        <th>PARCELA $</th>
+        <th>LUCRO POTENCIAL</th>
+      </tr>
 
-.form-box input{
-width:100%;
-margin:10px 0;
-padding:12px;
-border:none;
-}
+      <tr>
+        <td>R$ 100.000</td>
+        <td>€ 55,95</td>
+        <td>$ 64,12</td>
+        <td class="lucro">+ R$ 40.000</td>
+      </tr>
 
-.btn-form{
-background:red;
-color:#fff;
-padding:12px;
-display:block;
-margin-top:10px;
-}
+      <tr>
+        <td>R$ 200.000 🔥</td>
+        <td>€ 109,89</td>
+        <td>$ 129,31</td>
+        <td class="lucro">+ R$ 80.000</td>
+      </tr>
 
-/* TABELA */
-.tabela{
-padding:80px 0;
-text-align:center;
-background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
-}
+      <tr>
+        <td>R$ 400.000</td>
+        <td>€ 219,98</td>
+        <td>$ 258,62</td>
+        <td class="lucro">+ R$ 160.000</td>
+      </tr>
 
-.tabela h2{
-margin-bottom:10px;
-}
+      <tr>
+        <td>R$ 600.000</td>
+        <td>€ 351,86</td>
+        <td>$ 414,03</td>
+        <td class="lucro">+ R$ 240.000</td>
+      </tr>
 
-.tabela p{
-margin-bottom:30px;
-color:#aaa;
-}
+      <tr>
+        <td>R$ 1.000.000</td>
+        <td>€ 586,44</td>
+        <td>$ 690,05</td>
+        <td class="lucro">+ R$ 400.000</td>
+      </tr>
 
-table{
-margin:0 auto;
-border-collapse:collapse;
-}
+    </table>
 
-th{
-background:red;
-padding:12px 20px;
-}
+  </div>
+</section>
 
-td{
-padding:10px 20px;
-text-align:center;
-}
+<!-- PASSOS -->
+<section class="passos">
+  <div class="container">
 
-.lucro{
-color:lime;
-}
+    <h2>3 PASSOS SIMPLES</h2>
 
-/* PASSOS (CORRIGIDO CENTRAL) */
-.passos{
-padding:100px 0;
-background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
-}
+    <div class="passo">
+      <span>01</span>
+      <div>
+        <h3>Escolha seu crédito</h3>
+        <p>Defina o valor do crédito que deseja — de R$100k a R$1 milhão.</p>
+      </div>
+    </div>
 
-.passos .container{
-max-width:900px;
-margin:0 auto;
-}
+    <div class="passo">
+      <span>02</span>
+      <div>
+        <h3>Pague de onde estiver</h3>
+        <p>Sua parcela é em euro ou dólar, direto do exterior.</p>
+      </div>
+    </div>
 
-.passos h2{
-text-align:center;
-margin-bottom:60px;
-font-size:32px;
-}
+    <div class="passo">
+      <span>03</span>
+      <div>
+        <h3>Receba seu crédito</h3>
+        <p>Invista no Brasil ou lucre com a carta contemplada.</p>
+      </div>
+    </div>
 
-.passo{
-display:flex;
-align-items:flex-start;
-gap:20px;
-margin-bottom:40px;
-padding-bottom:20px;
-border-bottom:1px solid #222;
-}
+  </div>
+</section>
 
-.passo span{
-color:red;
-font-size:28px;
-min-width:40px;
-}
+<!-- DEPOIMENTOS -->
+<section class="depoimentos">
+  <div class="container">
 
-.passo h3{
-color:#fff;
-margin-bottom:5px;
-}
+    <p class="subtitulo">QUEM JÁ INVESTIU</p>
+    <h2>HISTÓRIAS REAIS</h2>
 
-.passo p{
-color:#bbb;
-max-width:600px;
-}
+    <div class="card">
+      <img src="img/cliente1.jpg">
+      <div>
+        <h4>Marcos F.</h4>
+        <span>Lisboa, Portugal</span>
+        <div class="stars">★★★★★</div>
+        <p>"Fiquei 3 anos sem investir. Hoje pago €109/mês e já tenho crédito aprovado."</p>
+      </div>
+    </div>
 
-/* DEPOIMENTOS (CORRIGIDO CENTRAL) */
-.depoimentos{
-padding:120px 0;
-background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
-}
+    <div class="card">
+      <img src="img/cliente2.jpg">
+      <div>
+        <h4>Camila A.</h4>
+        <span>Miami, EUA</span>
+        <div class="stars">★★★★★</div>
+        <p>"Comprei a cota e lucrei R$80.000. Com o dólar alto, ficou ainda melhor."</p>
+      </div>
+    </div>
 
-.depoimentos .container{
-max-width:900px;
-margin:0 auto;
-}
+    <div class="card">
+      <img src="img/cliente3.jpg">
+      <div>
+        <h4>Ricardo S.</h4>
+        <span>Londres, Reino Unido</span>
+        <div class="stars">★★★★★</div>
+        <p>"Processo 100% online. Em menos de uma semana estava tudo ativo."</p>
+      </div>
+    </div>
 
-.subtitulo{
-color:#ff2a2a;
-font-size:12px;
-letter-spacing:3px;
-margin-bottom:10px;
-text-transform:uppercase;
-}
+  </div>
+</section>
 
-.depoimentos h2{
-font-size:56px;
-margin-bottom:40px;
-}
+<!-- BANNER -->
+<section class="banner">
+  <img src="img/banner.jpg">
+</section>
 
-.card{
-background:#161616;
-border:1px solid #222;
-border-radius:15px;
-padding:25px;
-margin-bottom:25px;
-display:flex;
-gap:15px;
-}
+<!-- WHATSAPP FLOAT -->
+<a href="#" class="whatsapp-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
-.card img{
-width:60px;
-height:60px;
-border-radius:50%;
-}
-
-.card h4{
-color:#fff;
-}
-
-.card span{
-color:#aaa;
-font-size:13px;
-display:block;
-margin-bottom:5px;
-}
-
-.stars{
-color:#f5a623;
-margin-bottom:10px;
-}
-
-.card p{
-color:#bbb;
-}
-
-/* BANNER */
-.banner img{
-width:100%;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 0 15px rgba(0,0,0,0.5);
-}
-
-.whatsapp-float img{
-width:30px;
-}
+</body>
+</html>
