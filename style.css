@@ -6,135 +6,302 @@ box-sizing:border-box;
 }
 
 body{
-font-family: 'Inter', Arial, sans-serif;
+font-family:Arial, sans-serif;
 background:#050505;
 color:#fff;
 }
 
-/* CONTAINER PADRÃO (RESOLVE 90% DOS PROBLEMAS) */
+/* CONTAINER GLOBAL */
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:0 auto;
 padding:0 20px;
 }
 
-/* PADRÃO DE SEÇÃO */
+/* FUNDO PADRÃO ESTILO LOVABLE */
 section{
-padding:100px 0;
+position:relative;
 }
 
-/* ================= HERO ================= */
+section::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size:3px 3px;
+opacity:0.2;
+pointer-events:none;
+}
+
+/* HERO */
 .hero{
+display:flex;
+align-items:center;
+padding:80px 0;
 background:#f5f5f5;
 color:#000;
+position:relative;
 }
 
 .hero .container{
 display:flex;
 align-items:center;
-gap:40px;
 }
 
-.hero-left{flex:1;}
+.logo{
+position:absolute;
+top:20px;
+left:20px;
+width:120px;
+opacity:0.15;
+}
+
+.hero-left{
+width:50%;
+}
 
 .hero h1{
 color:#ff2a2a;
-font-size:48px;
+font-size:46px;
 line-height:1.2;
+margin-bottom:20px;
 }
 
 .btn-whatsapp{
 display:inline-flex;
 align-items:center;
 gap:10px;
-margin-top:25px;
 background:#ff2a2a;
 color:#fff;
-padding:14px 26px;
+padding:14px 28px;
 border-radius:30px;
 text-decoration:none;
-font-weight:600;
+margin-top:20px;
 }
 
-.hero-right{flex:1;}
-.hero-right img{width:100%;}
+.btn-whatsapp img{
+width:20px;
+}
 
-/* ================= BARRA ================= */
+.apresentacao{
+margin-top:20px;
+color:#555;
+max-width:500px;
+}
+
+.hero-right{
+width:50%;
+position:relative;
+}
+
+.hero-right img{
+width:100%;
+}
+
+.hero-right::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:200px;
+height:100%;
+background:linear-gradient(to right,#f5f5f5,transparent);
+}
+
+/* BARRA */
 .barra-beneficios{
-background:#ff2a2a;
+background:red;
+padding:12px 0;
 }
 
 .barra-beneficios .container{
 display:flex;
 justify-content:space-between;
-font-size:14px;
-padding:12px 0;
+color:#fff;
 }
 
-.item{display:flex;align-items:center;gap:8px;}
+.item{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
 .bolinha{
-width:8px;height:8px;background:#00ff00;border-radius:50%;
+width:8px;
+height:8px;
+background:lime;
+border-radius:50%;
 }
 
-/* ================= FORM (ESTILO LOVABLE) ================= */
+/* FORM */
 .form-section{
-background: radial-gradient(circle at top, #0f0f0f, #050505);
+padding:80px 0;
+background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
 }
 
 .form-box{
-max-width:480px;
+background:#111;
+padding:30px;
+border-radius:10px;
+width:350px;
 margin:0 auto;
 text-align:center;
-}
-
-.form-box h3{
-font-size:30px;
-margin-bottom:25px;
-font-weight:600;
 }
 
 .form-box input{
 width:100%;
-padding:15px;
-margin-bottom:12px;
-border-radius:6px;
-border:1px solid #222;
-background:#111;
-color:#fff;
-font-size:14px;
-}
-
-.form-box input:focus{
-outline:none;
-border:1px solid #ff2a2a;
+margin:10px 0;
+padding:12px;
+border:none;
 }
 
 .btn-form{
-background:#ff2a2a;
+background:red;
 color:#fff;
-padding:14px;
-border-radius:6px;
+padding:12px;
 display:block;
 margin-top:10px;
-font-weight:600;
 }
 
-/* ================= TABELA (PADRÃO LOVABLE) ================= */
+/* TABELA */
 .tabela{
+padding:80px 0;
 text-align:center;
+background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
 }
 
 .tabela h2{
-font-size:34px;
 margin-bottom:10px;
 }
 
 .tabela p{
-color:#888;
 margin-bottom:30px;
+color:#aaa;
 }
 
 table{
 margin:0 auto;
-border-collapse:separate;
-border-spacing:0 12px
+border-collapse:collapse;
+}
+
+th{
+background:red;
+padding:12px 20px;
+}
+
+td{
+padding:10px 20px;
+text-align:center;
+}
+
+.lucro{
+color:lime;
+}
+
+/* PASSOS */
+.passos{
+padding:100px 0;
+background:#0b0b0b;
+}
+
+.passos .container{
+max-width:900px;
+}
+
+.passos h2{
+margin-bottom:40px;
+}
+
+.passo{
+display:flex;
+margin-bottom:40px;
+border-bottom:1px solid #222;
+padding-bottom:20px;
+}
+
+.passo span{
+color:red;
+font-size:28px;
+margin-right:20px;
+}
+
+/* DEPOIMENTOS */
+.depoimentos{
+padding:120px 0;
+background: radial-gradient(circle at top, #0f0f0f 0%, #050505 100%);
+}
+
+.subtitulo{
+color:#ff2a2a;
+font-size:12px;
+letter-spacing:3px;
+margin-bottom:10px;
+text-transform:uppercase;
+}
+
+.depoimentos h2{
+font-size:56px;
+margin-bottom:40px;
+}
+
+.card{
+background:#161616;
+border:1px solid #222;
+border-radius:15px;
+padding:25px;
+margin-bottom:25px;
+display:flex;
+gap:15px;
+max-width:700px;
+}
+
+.card img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+.card h4{
+color:#fff;
+}
+
+.card span{
+color:#aaa;
+font-size:13px;
+display:block;
+margin-bottom:5px;
+}
+
+.stars{
+color:#f5a623;
+margin-bottom:10px;
+}
+
+.card p{
+color:#bbb;
+}
+
+/* BANNER */
+.banner img{
+width:100%;
+}
+
+/* BOTÃO WHATS FLUTUANTE */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.whatsapp-float img{
+width:30px;
+}
